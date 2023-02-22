@@ -44,7 +44,7 @@ const optionsR = {
 fetch(url, optionsR)
   .then(res => res.json())
   .then(data => {
-    // Contato Whatsapp com o responsável
+    // Contato WhatsApp com o responsável
     for (let index = 0; index < data.data.cards.edges.length; index++) {
       const phase = data.data.cards.edges[index].node.current_phase.name;
       const name = data.data.cards.edges[index].node.fields[0].value.split(" ")[0];
